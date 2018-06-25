@@ -1,0 +1,3 @@
+defaults=com.javaman.dubbo.test.extention.DefaultExtensionImpl
+other=com.javaman.dubbo.test.extention.OtherExtensionImpl
+adaptive=com.javaman.dubbo.test.extention.MyAdaptiveExtension
