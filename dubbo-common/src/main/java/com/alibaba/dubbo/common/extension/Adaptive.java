@@ -29,6 +29,9 @@ import java.lang.annotation.Target;
  *
  * @see ExtensionLoader
  * @see URL
+ * 使用方式：
+ * 1. 注解放在扩展接口实现类上，表示这个是自定义的适配器类，由这个类决定运行期返回哪种扩展实现类，这种最简单；
+ * 2. 注解放在扩展接口的方法上，这种只能dubbo帮我们生成适配器类了:
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)

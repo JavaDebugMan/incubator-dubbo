@@ -1,0 +1,3 @@
+adaptive=com.javaman.dubbo.test.adaptive.spi2.Dir2ExtensionAdaptive
+dir2Default=com.javaman.dubbo.test.adaptive.spi2.Dir2ExtensionDefaultImpl
+dir2First=com.javaman.dubbo.test.adaptive.spi2.Dir2ExtensionFirstImpl

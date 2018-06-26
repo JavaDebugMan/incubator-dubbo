@@ -26,6 +26,10 @@ import java.util.List;
 
 /**
  * AdaptiveExtensionFactory
+ * 注解Adpative加载AdaptiveExtensionFactory类上表示这是个自定义的适配器类，
+ * 有2个实现类，一个是Spi（从dubbo 的扩展中获取）
+ * ，一个spring（获取spring的bean），AdaptiveExtensionFactory轮询这2个，
+ * 从一个中获取到就返回。
  */
 @Adaptive
 public class AdaptiveExtensionFactory implements ExtensionFactory {
@@ -33,7 +37,8 @@ public class AdaptiveExtensionFactory implements ExtensionFactory {
     private final List<ExtensionFactory> factories;
 
     public AdaptiveExtensionFactory() {
-        ExtensionLoader<ExtensionFactory> loader = ExtensionLoader.getExtensionLoader(ExtensionFactory.class);
+        ExtensionLoader<ExtensionFactory> loader = ExtensionLoader
+                .getExtensionLoader(ExtensionFactory.class);
         List<ExtensionFactory> list = new ArrayList<ExtensionFactory>();
         for (String name : loader.getSupportedExtensions()) {
             list.add(loader.getExtension(name));

@@ -1,0 +1,2 @@
+dirDefault=com.javaman.dubbo.test.adaptive.spi.DirExtensionDefaultImpl
+dirFirst=com.javaman.dubbo.test.adaptive.spi.DirExtensionFirstImpl
