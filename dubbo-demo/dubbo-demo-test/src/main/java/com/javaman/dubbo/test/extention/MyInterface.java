@@ -7,7 +7,7 @@ import com.alibaba.dubbo.common.extension.SPI;
  * @date 2018/6/25 21:20
  * @description
  */
-@SPI("defaults")
+@SPI()
 public interface MyInterface {
     String sayHello(String name, String type);
 }

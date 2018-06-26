@@ -16,6 +16,7 @@ public class ExtensionTest {
                 .getExtensionLoader(MyInterface.class);
         MyInterface myFirstExtension = (MyInterface) extensionLoader
                 .getAdaptiveExtension();
+
         System.out.println(myFirstExtension.sayHello("xxx",
                 ExtensionType.other));
     }

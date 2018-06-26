@@ -2,6 +2,7 @@ package com.javaman.dubbo.test.adaptive.spi;
 
 import com.alibaba.dubbo.common.URL;
 import com.alibaba.dubbo.common.extension.ExtensionLoader;
+import com.javaman.dubbo.test.adaptive.constanse.SpiConstants;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,10 +21,12 @@ public class DirExtensionTest {
 
         Map<String, String> parameters = new HashMap<String, String>();
         //parameters.put("dirFirst", "dirFirst");
-        parameters.put("dirDefault", "dirDefault");
+        parameters.put("dirFirst", SpiConstants.DIR_DEFAULT);
+        parameters.put("dirFirst", SpiConstants.DIR_FIRST);
+        parameters.put("dirFirst", SpiConstants.DIR2_DEFAULT);
 
         URL url = new URL("dubbo", "127.0.0.1", 8089, parameters);
 
-        System.out.println(dirExtension.sayHello(url, "qbb"));
+        System.out.println(dirExtension.sayHello(url, "哲哥"));
     }
 }

@@ -10,7 +10,7 @@ import com.javaman.dubbo.test.adaptive.constanse.SpiConstants;
  * @date 2018/6/26 12:04
  * @description
  */
-@SPI("dirDefault")
+@SPI()
 public interface DirExtension {
     @Adaptive({SpiConstants.DIR_DEFAULT, SpiConstants.DIR_FIRST})
     String sayHello(URL url, String name);
